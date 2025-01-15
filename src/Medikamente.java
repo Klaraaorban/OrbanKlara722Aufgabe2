@@ -1,3 +1,7 @@
+/**
+ * Medikamente class
+ */
+
 public class Medikamente {
     String name;
     int price;

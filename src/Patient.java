@@ -1,5 +1,8 @@
 import java.util.List;
 
+/**
+ * This class represents a patient.
+ */
 public class Patient {
     int id;
     String Name;

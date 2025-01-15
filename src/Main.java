@@ -1,6 +1,9 @@
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * The Main class is the entry point of the application.
+ */
 public class Main {
     public static void main(String[] args) {
         Repo<Medikamente> medikamenteRepo = new Repo<>();
@@ -12,12 +15,14 @@ public class Main {
 
         Patient patient1 = new Patient(1,"John Doe", 12,"Headache", List.of(medikament1, medikament2));
         Patient patient2 = new Patient(2,"Jane Doe", 15,"Fever", List.of(medikament1));
+        Patient patient3 = new Patient(3,"Alice", 20,"Headache", List.of(medikament2));
 
         medikamenteRepo.create(medikament1);
         medikamenteRepo.create(medikament2);
 
         patientRepo.create(patient1);
         patientRepo.create(patient2);
+        patientRepo.create(patient3);
 
         Console consoleView = new Console(controller);
         consoleView.start();
@@ -33,4 +38,3 @@ public class Main {
 //        controller.sortMedikamentofPatient("John Doe", "asc");
     }
 }
-//write console for this

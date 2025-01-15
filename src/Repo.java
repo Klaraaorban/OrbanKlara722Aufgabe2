@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents a generic repository.
+ * @param <T>
+ */
 public class Repo<T> {
     private List<T> entities = new ArrayList<>();
 

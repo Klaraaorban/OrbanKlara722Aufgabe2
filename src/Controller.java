@@ -1,6 +1,9 @@
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Controller class
+ */
 public class Controller {
     Repo<Medikamente> medsRepo = new Repo<>();
     static Repo<Patient> patientRepo = new Repo<>();
@@ -10,6 +13,10 @@ public class Controller {
         this.patientRepo = patientRepo;
     }
 
+    /**
+     * Filters patients by diagnosis
+     * @param diagnosis
+     */
     public static void filterPatientByDiagnosis(String diagnosis) {
         List<Patient> patients = patientRepo.getAll().stream()
                 .filter(patient -> patient.getDiagnosis().equals(diagnosis))
@@ -19,6 +26,10 @@ public class Controller {
         }
     }
 
+    /**
+     * Filters patients by medication
+     * @param medication
+     */
     public static void filterPatientByMedication(String medication) {
         List<Patient> patients = patientRepo.getAll().stream()
                 .filter(patient -> patient.getMedikamentes()!=null && patient.getMedikamentes().stream()
@@ -29,6 +40,11 @@ public class Controller {
         }
     }
 
+    /**
+     * Sorts medications of a patient
+     * @param patient
+     * @param order
+     */
     public static void sortMedikamentofPatient(String patient, String order){
         Patient patient1 = patientRepo.getAll().stream()
                 .filter(p -> p.getName().equalsIgnoreCase(patient))

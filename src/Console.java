@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * Console class that handles user input and output.
+ */
 public class Console {
     private final Controller controller;
 
