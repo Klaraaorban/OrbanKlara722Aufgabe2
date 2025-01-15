@@ -5,7 +5,7 @@ public class Medikamente {
     public Medikamente(String name, int price, String krankenhaus) {
         this.name = name;
         this.price = price;
-        Krankenhaus = krankenhaus;
+        this.Krankenhaus = krankenhaus;
     }
 
     String Krankenhaus;
